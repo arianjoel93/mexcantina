@@ -18,17 +18,20 @@
             <a href="/">
                 <img src="img/Recurso 1.png" />
             </a>
-            <nav>
-                <a href="/" title="Go to Home Page">Home <svg width="20" height="20" viewBox="0 0 25 25">
+            <nav id="navbar">
+                <a onclick="toggleMenu()" href="/" title="Go to Home Page">Home <svg width="20" height="20" viewBox="0 0 25 25">
                         <path d="M12 15l-8-8h16z" />
                     </svg></a>
-                <a href="#menu" title="View our Menu">Menu <svg width="20" height="20" viewBox="0 0 25 25">
+                <a onclick="toggleMenu()" href="#menu" title="View our Menu">Menu <svg width="20" height="20" viewBox="0 0 25 25">
                         <path d="M12 15l-8-8h16z" />
                     </svg></a>
-                <a href="#contact" title="Contact Us">Contact <svg width="20" height="20" viewBox="0 0 25 25">
+                <a onclick="toggleMenu()" href="#contact" title="Contact Us">Contact <svg width="20" height="20" viewBox="0 0 25 25">
                         <path d="M12 15l-8-8h16z" />
                     </svg></a>
             </nav>
+            <div id="menu-icon" onclick="toggleMenu()">
+                &#9776;
+            </div>
         </header>
         <div id="home" class="container_home">
             Hot And Ready To Serve
