@@ -1,31 +1,38 @@
 @font-face {
     font-family: 'fuente-1';
-    src: url('/img/Fonts/BakerStreet-Inline.ttf') format('truetype');}
+    src: url('/img/Fonts/cream_peach/Cream\ Peach.ttf') format('truetype');
+}
+
 @font-face {
     font-family: 'fuente-2';
     src:
-         url('/img/Fonts/ChronicaPro-Medium.otf') format('opentype');
+        url('/img/Fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'fuente-3';
-    src: url('/img/Fonts/helveticaneue-bold-opentype_bigfontsite.com.otf') format('opentype');
+    src: url('/img/Fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
 
 }
+
 @font-face {
     font-family: 'fuente-4';
     src: url('/img/Fonts/HelveticaNeue-Medium_0.otf') format('opentype');
 
 }
+
 @font-face {
     font-family: 'fuente-5';
     src: url('/img/Fonts/myriadpro-regular.otf')format('opentype');
 
 }
+
 @font-face {
     font-family: 'fuente-6';
     src: url('/img/Fonts/Gobold\ Hollow\ Bold.otf')format('opentype');
 
 }
+
 @font-face {
     font-family: 'fuente-7';
     src: url('/img/Fonts/Chunk\ Five\ Print.otf')format('opentype');
@@ -35,34 +42,55 @@
 
 html {
     font-size: 62.5%;
-    box-sizing: border-box; /* Hack para Box Model **/
+    box-sizing: border-box;
+    /* Hack para Box Model **/
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
-p,h1,h2,h3,h4,h5,h6{
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
 }
+
+p {
+    font-size: 14px;
+}
+
 body {
-    font-size: 16px; /* 1rem = 10px */
-    font-family: 'fuente-5', sans-serif;
+    font-size: 16px;
+    /* 1rem = 10px */
+    font-family: 'fuente-3', sans-serif;
+    color: rgb(84, 84, 84);
     margin: 0;
 }
-.container{
+
+.container {
     width: min(144rem, 90%);
     margin: 0 auto;
     text-align: center;
 }
-.container_secundary{
+
+.container_secundary {
     width: min(108rem, 90%);
     margin: 0 auto;
     text-align: center;
 }
 
 /* Header */
-header{
+header {
+    position: relative;
     display: flex;
     height: 60px;
     width: 100%;
@@ -70,116 +98,173 @@ header{
     padding: 0 2rem;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.233);
+    z-index: 999;
 }
-header img{
+
+header img {
     width: 80px;
     height: auto;
 }
-header nav{
+
+header nav {
     display: flex;
     gap: 3rem;
     color: white;
     font-weight: bold;
 }
-nav a{
+
+nav a {
     color: white;
     font-weight: bold;
     text-decoration: none;
     font-size: 14px;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    fill: white;
+    gap: 5px;
 }
-nav a:hover{
+
+nav a:hover {
     color: rgb(220, 220, 220);
     transition: all 0.5s ease;
     color: rgb(179, 146, 26);
+    transition: all 0.5s ease;
 }
 
+nav a:hover svg {
+    fill: rgb(179, 146, 26);
+    transition: all 0.5s ease;
+}
+
+
 /* Fotter */
-footer{
+footer {
     height: 60px;
     width: 100%;
-    display:grid;
+    display: grid;
     place-items: center;
     background-color: rgba(0, 0, 0, 0.952);
     color: rgb(226, 253, 253);
     font-size: 14px;
+    text-align: center;
 }
 
 
 /* Home */
-.container_home{
+.container_home {
     background-image: url(../img/LUGAR.jpg);
-    height: 90vh;
+    height: 900px;
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin-top: -60px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    font-family: 'fuente-1', sans-serif;
+    font-size: 50px;
+    color: rgba(216, 216, 216, 0.607);
 
 }
 
-.container_cicle{
+@media (max-width: 768px) {
+    .container_home {
+        height: 90vh;
+
+    }
+
+}
+
+.container_cicle {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
     width: 100%;
-    background-color:transparent;
+    background-color: transparent;
+    position: relative;
 }
-.container_cicle .cicle{
+
+.container_cicle .cicle {
     height: 30px;
     width: 30px;
     border-radius: 50%;
     background-color: white;
     margin-top: -100px;
 }
-.container_cicle .cicle_bottom{
+
+.container_cicle .cicle_bottom {
     height: 30px;
     width: 30px;
     border-radius: 50%;
     background-color: white;
     margin-bottom: -100px;
 }
-.welcome{
+
+.welcome {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
     margin-bottom: 100px;
+
 }
-.c_info_welcome{
-    max-width: 98rem;
+
+.welcome h1 {
+    font-family: 'fuente-1', sans-serif;
+    font-weight: normal;
+}
+
+.c_info_welcome {
+    max-width: 75rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
 }
-.c_img_welcome{
-    width:100%;
+
+.c_img_welcome {
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 3rem;
+    font-family: 'fuente-1', sans-serif;
+    letter-spacing: 1.3px;
 }
 
-.img_welcome{
+.img_welcome {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
 }
-.c_img_welcome img{
+
+.c_img_welcome img {
     width: 450px;
     height: 200px;
     object-fit: cover;
 }
+
 @media (max-width: 480px) {
-    .c_img_welcome img{
+    .c_img_welcome img {
         max-width: 95%;
         height: auto;
     }
 }
 
-.main_check{
-    background-image:url(../img//Recurso\ 3@2x-100.jpg);
+.container_secundary h1,
+h4 {
+    font-family: 'fuente-1', sans-serif;
+    font-weight: normal;
+}
+
+.main_check {
+    background-image: url(../img//Recurso\ 3@2x-100.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -188,20 +273,23 @@ footer{
     color: white;
 
 }
-.container_check{
+
+.container_check {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     place-items: center;
     gap: 2rem;
 }
+
 @media (max-width: 768px) {
-  .container_check{
-    display: flex;
-    flex-direction: column;
-  }
+    .container_check {
+        display: flex;
+        flex-direction: column;
+    }
 }
-.card_specials{
+
+.card_specials {
     width: 100%;
     height: auto;
     padding: 0.5rem 1rem;
@@ -212,19 +300,22 @@ footer{
     color: gray;
     gap: 1rem;
 }
-.card_specials img{
+
+.card_specials img {
     width: 100%;
     height: 180px;
     object-fit: cover;
 }
-.card_specials_info{
+
+.card_specials_info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
     gap: 1rem;
 }
-.card_specials_info p{
+
+.card_specials_info p {
     align-items: start;
     font-size: 12px;
 }
@@ -232,47 +323,57 @@ footer{
 /* end home */
 
 /* Menu */
-.container_menu{
+.container_menu {
     height: 100%;
 
 }
 
-.menu_container{
+.menu_container {
     padding-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    padding: 100px 20px 0 20px
 
 }
-.menu_container h4{
+
+.menu_container h1 {
+    font-family: 'fuente-1', sans-serif;
+    font-weight: normal;
+}
+
+.menu_container h4 {
     margin: 5rem 0;
+    font-size: 16px;
+    text-align: center;
 }
 
-.container_subtitle{
-    max-width:  60rem;
+.container_subtitle {
+    max-width: 60rem;
     display: grid;
     place-items: center;
     text-align: center;
 
 }
 
-.container_info_menu{
+.container_info_menu {
     background-image: url(../img/Recurso\ 1-100.jpg);
     width: 100%;
-    height: 85vh;
+    height: 800px;
     background-repeat: no-repeat;
-    background-size:cover;
-    display:grid;
+    background-size: cover;
+    display: grid;
     place-items: center;
     margin: 5rem;
 }
+
 @media (max-width: 992px) {
-    .container_info_menu{
+    .container_info_menu {
         height: auto;
     }
 }
-.card_menu_container{
+
+.card_menu_container {
     max-width: 85rem;
     width: 100%;
     background-color: rgb(226, 226, 226);
@@ -281,14 +382,16 @@ footer{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
 }
+
 @media (max-width: 992px) {
-    .card_menu_container{
+    .card_menu_container {
         display: flex;
         flex-direction: column;
         margin-top: 0px;
     }
 }
-.card_menu_text{
+
+.card_menu_text {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -299,92 +402,138 @@ footer{
     padding: 3rem;
     gap: 1rem;
     text-align: center;
+    height: 220px;
 }
-.card_menu_img{
+
+.card_menu_text h3,
+strong {
+    font-family: 'fuente-1', sans-serif;
+    font-weight: normal;
+}
+
+.card_menu_text strong {
+    font-size: 14px;
+    color: rgb(179, 146, 26);
+}
+
+.card_menu_text p {
+    font-size: 10px;
+}
+
+.card_menu_img {
     width: 100%;
     height: 220px;
 
 }
-.card_menu_img img{
+
+.card_menu_img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.card_menu_hours{
-    display:flex;
+
+.card_menu_hours {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    font-size: 4rem;
 }
-.card_menu_hours h1{
+
+.card_menu_hours h1 {
     font-size: 4rem;
     margin: 0;
 }
 
-.button_menu{
+.button_menu {
     margin: 2rem 0;
 }
-.button_menu button{
+
+.button_menu button {
     width: 200px;
-    height:40px;
+    height: 40px;
     cursor: pointer;
     border: none;
     background-color: rgb(179, 146, 26);
     color: white;
 }
-.button_menu button:hover{
+
+.button_menu button:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(179, 146, 26);
     border: 1px solid rgb(179, 146, 26);
     letter-spacing: 1.2px;
     transition: all 0.5s ease;
 }
+
 /* end menu */
 
 /* Contact */
-.container_contact{
+.container_contact {
     height: 100%;
 }
-.contact_content_container{
+
+.contact_content_container {
     background-image: url(../img/Recurso\ 3@2x-100.jpg);
-    height: calc(100vh - 60px);
+    height: 600px;
+    width: 100%;
     background-repeat: no-repeat;
-    background-size:cover;
-    display:grid;
+    background-size: cover;
+    display: grid;
     place-items: center;
+    padding: 50px 0;
 }
-.contact_grid_int{
+@media (max-width: 768px) {
+    .contact_content_container {
+        height: 100%;
+    }
+  
+}
+
+.contact_grid_int {
     display: flex;
     flex-wrap: wrap;
     max-width: 100rem;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    
+
 }
+
 @media (max-width: 992px) {
-    .contact_grid_int{
+    .contact_grid_int {
         flex-direction: column;
         gap: 10rem
     }
 }
 
-.content_info{
+.content_info {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     justify-content: center;
     align-items: center;
 }
-.content_info strong{
-    color: rgb(179, 146, 26);;
+
+.content_info h3 {
+    font-family: 'fuente-1', sans-serif;
+    font-weight: normal;
+    color: white;
 }
 
-.content_reservation{
-    width:280px;
+.content_info strong {
+    color: rgb(179, 146, 26);
+}
+
+.content_info p {
+    color: white;
+}
+
+.content_reservation {
+    width: 280px;
     height: 320px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgb(23, 23, 23);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -392,56 +541,68 @@ footer{
     padding: 2rem;
     gap: 1rem;
 }
-.content_reservation h2{
+
+.content_reservation h2 {
     margin-bottom: 3rem;
     text-align: center;
 }
-.content_reservation p{
-    font-size: 14px;
+
+.content_reservation p {
+    font-size: 12px;
     border-bottom: 2px dashed rgb(183, 183, 183);
     padding: 4px;
 }
-.button_contact{
+.content_reservation h2{
+    font-family: 'fuente-1', sans-serif;
+    font-weight: normal;
+}
+
+.button_contact {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
 }
-.button_contact button{
+
+.button_contact button {
     width: 150px;
-    height:40px;
+    height: 40px;
     cursor: pointer;
     border: none;
     background-color: rgb(179, 146, 26);
     color: white;
 }
-.button_contact button:hover{
+
+.button_contact button:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(179, 146, 26);
     border: 1px solid rgb(179, 146, 26);
     letter-spacing: 1.2px;
     transition: all 0.5s ease;
 }
-.container_cicle_black{
+
+.container_cicle_black {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
     width: 100%;
-    background-color:transparent;
+    background-color: transparent;
 }
-.container_cicle_black .cicle{
+
+.container_cicle_black .cicle {
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.8);
-    margin-top: -40px;
+    background-color: rgb(23, 23, 23);
+    margin-top: -50px;
 }
-.container_cicle_black .cicle_bottom{
+
+.container_cicle_black .cicle_bottom {
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.8);
-    margin-bottom: -40px;
+    background-color: rgb(23, 23, 23);
+    margin-bottom: -50px;
 }
 
 /* end contact */

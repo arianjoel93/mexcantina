@@ -1,6 +1,6 @@
 const data = [
     {"title": "Steak & Shrimp", "img": "img/ESPECIALES WEB/carne asada.jpg", 'alt': "carne_asada_1", 'info': "Steak and shrimp, covered with melted cheese. Served with rice, refried beans and tortillas."},
-    {"title": "CARNE ASADA", "img": "img/ESPECIALES WEB/carne asada.jpg", 'alt': "carne_asada", 'info': " Grilled skirt steak. Served with rice, refried beans, guacamole salad, pico and tortillas."},
+    {"title": "Carne Asada", "img": "img/ESPECIALES WEB/carne asada.jpg", 'alt': "carne_asada", 'info': " Grilled skirt steak. Served with rice, refried beans, guacamole salad, pico and tortillas."},
     {"title": "Chimichanga", "img": "img/ESPECIALES WEB/chimicanga2.jpg", 'alt': "chimicanga", 'info': "Beef Grill Honey Sauce with Paprica"},
     {"title": "Mexcantina Platte", "img": "img/ESPECIALES WEB/mexcantina plate.jpg", 'alt': "mexcantina_plate", 'info': "Beef Grill Honey Sauce with Paprica"},
     {"title": "Enchiladas Oaxaqueñas", "img": "img/ESPECIALES WEB/enchilada oaxaca2.jpg", 'alt': "enchilada", 'info': "Beef Grill Honey Sauce with Paprica"},
