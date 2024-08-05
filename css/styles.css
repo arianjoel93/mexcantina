@@ -463,6 +463,12 @@ strong {
     height: 220px;
 
 }
+@media (max-width: 768px) {
+    .card_menu_img {
+        height: 350px;
+    }
+  
+}
 
 .card_menu_img img {
     width: 100%;
@@ -482,6 +488,17 @@ strong {
 .card_menu_hours h1 {
     font-size: 4rem;
     margin: 0;
+}
+@media (max-width: 768px) {
+    .card_menu_hours {
+        height: 350px;
+        font-size: 6rem;
+    }
+
+    .card_menu_hours h1 {
+        font-family: 'fuente-1', sans-serif;
+        font-size: 6rem;
+    }
 }
 
 .button_menu {
