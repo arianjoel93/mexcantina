@@ -507,6 +507,7 @@ strong {
     align-items: center;
     min-height: 200px;
     justify-content: center;
+    text-decoration: none;
 }
 
 .button_menu button {
