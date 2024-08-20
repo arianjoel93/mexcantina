@@ -1,5 +1,5 @@
 const data = [
-    { "title": "Steak & Shrimp", "img": "img/ESPECIALES WEB/carne asada.jpg", 'alt': "carne_asada_1", 'info': "Ribeye steak and shrimp, covered with melted cheese. Served with rice, refried beans and tortillas." },
+    { "title": "Steak & Shrimp", "img": "img/ESPECIALES WEB/Recurso 24.png", 'alt': "carne_asada_1", 'info': "Ribeye steak and shrimp, covered with melted cheese. Served with rice, refried beans and tortillas." },
     { "title": "Carne Asada", "img": "img/ESPECIALES WEB/carne asada.jpg", 'alt': "carne_asada", 'info': " Grilled skirt steak. Served with rice, refried beans, guacamole salad, pico and tortillas." },
     { "title": "Chimichanga", "img": "img/ESPECIALES WEB/chimicanga2.jpg", 'alt': "chimicanga", 'info': "Two soft or deep-fried burritos topped with our in-house made cheese sauce. Served with rice and refried beans, sour cream and guacamole salad." },
     { "title": "Mexcantina Platter", "img": "img/ESPECIALES WEB/mexcantina plate.jpg", 'alt': "mexcantina_plate", 'info': "Chicken enchilada, grilled marinated chicken breast and skirt steak. Served with rice, black beans and tortillas." },

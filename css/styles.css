@@ -71,7 +71,8 @@ p {
 body {
     font-size: 16px;
     /* 1rem = 10px */
-    font-family: 'fuente-3', sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400 !important;
     color: rgb(84, 84, 84);
     margin: 0;
 }
@@ -104,6 +105,18 @@ body {
     width: min(108rem, 90%);
     margin: 0 auto;
     text-align: center;
+}
+iframe{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+main{
+    background-image: url('/img/Recurso\ 16.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /* Header */
@@ -225,7 +238,7 @@ footer {
     display: grid;
     place-items: center;
     font-family: 'fuente-1', sans-serif;
-    font-size: 50px;
+    font-size: 80px;
     color: rgb(239, 239, 239);
     text-align: center;
 
@@ -580,7 +593,7 @@ strong {
 
 .contact_content_container {
     background-image: url(../img/Recurso\ 3@2x-100.jpg);
-    height: 600px;
+    min-height: 600px;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -609,7 +622,10 @@ strong {
 @media (max-width: 992px) {
     .contact_grid_int {
         flex-direction: column;
-        gap: 10rem
+        gap: 0rem
+    }
+    iframe{
+        margin-bottom: 10rem;
     }
 }
 
@@ -705,7 +721,7 @@ strong {
     width: 30px;
     border-radius: 50%;
     background-color: rgb(23, 23, 23);
-    margin-top: -50px;
+    margin-top: -40px;
 }
 
 .container_cicle_black .cicle_bottom {
@@ -713,7 +729,7 @@ strong {
     width: 30px;
     border-radius: 50%;
     background-color: rgb(23, 23, 23);
-    margin-bottom: -50px;
+    margin-bottom: -40px;
 }
 
 /* end contact */
@@ -1071,6 +1087,7 @@ strong {
 .socials {
     display: flex;
     gap: 1rem;
+    margin: 5rem 0;
 
 }
 
