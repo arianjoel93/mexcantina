@@ -12,37 +12,87 @@
     <meta name="keywords" content="Mexican cuisine, authentic Mexican food, Mexican restaurant">
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <title>Mexcantina</title>
 </head>
 
 <body>
+
+    <header>
+        <a href="/">
+            <img src="img/Recurso 1.png" />
+        </a>
+        <nav id="navbar">
+            <a onclick="toggleMenu()" href="/" title="Go to Home Page">Home <svg width="20" height="20"
+                    viewBox="0 0 25 25">
+                    <path d="M12 15l-8-8h16z" />
+                </svg></a>
+            <a href="/menu.html" title="View our Menu">Menu <svg width="20" height="20" viewBox="0 0 25 25">
+                    <path d="M12 15l-8-8h16z" />
+                </svg></a>
+            <a onclick="toggleMenu()" href="#contact" title="Contact Us">Contact <svg width="20" height="20"
+                    viewBox="0 0 25 25">
+                    <path d="M12 15l-8-8h16z" />
+                </svg></a>
+            <a onclick="toggleModal()">ORDER ONLINE</a>
+        </nav>
+        <div id="menu-icon" onclick="toggleMenu()">
+            &#9776;
+        </div>
+    </header>
     <main>
-        <header>
-            <a href="/">
-                <img src="img/Recurso 1.png" />
-            </a>
-            <nav id="navbar">
-                <a onclick="toggleMenu()" href="/" title="Go to Home Page">Home <svg width="20" height="20"
-                        viewBox="0 0 25 25">
-                        <path d="M12 15l-8-8h16z" />
-                    </svg></a>
-                <a href="/menu.html" title="View our Menu">Menu <svg width="20" height="20" viewBox="0 0 25 25">
-                        <path d="M12 15l-8-8h16z" />
-                    </svg></a>
-                <a onclick="toggleMenu()" href="/#contact" title="Contact Us">Contact <svg width="20" height="20"
-                        viewBox="0 0 25 25">
-                        <path d="M12 15l-8-8h16z" />
-                    </svg></a>
-                <a href="https://order.spoton.com/so-mexcantina-tacos-quesadillas-y-margaritas-19358/cincinnati-oh/66463922847348003ec9155a"
-                    target="_blank" title="Contact Us">ORDER ONLINE</a>
-            </nav>
-            <div id="menu-icon" onclick="toggleMenu()">
-                &#9776;
+        <div id="overlay_modal" class="overlay_modal">
+            <div class="modal">
+                <div class="modal_options">
+                    <a target="_blank"
+                        href="https://order.spoton.com/so-mexcantina-tacos-quesadillas-y-margaritas-19358/cincinnati-oh/66463922847348003ec9155a">
+                        <div class="modal_img">
+                            <img src="img/spoton.png" />
+                            Spoton
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right"
+                            width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 12l14 0" />
+                            <path d="M15 16l4 -4" />
+                            <path d="M15 8l4 4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="modal_options">
+                    <a target="_blank"
+                        href="https://www.doordash.com/store/mexcantina-cincinnati-29927343/?pickup=true&utm_campaign=gpa">
+                        <div class="modal_img">
+                            <img src="img/doordash.png" />
+                            Doordash
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right"
+                            width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 12l14 0" />
+                            <path d="M15 16l4 -4" />
+                            <path d="M15 8l4 4" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="close-modal" onClick="toggleModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-x" width="44" height="44" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M18 6l-12 12" />
+                        <path d="M6 6l12 12" />
+                    </svg>
+                </div>
             </div>
-        </header>
+        </div>
         <div class="menu">
             <div class="menu-page-1">
                 <div class="container border">
@@ -73,7 +123,9 @@
                         <div class="tortas_card">
                             <div class="tortas_card_left">
                                 <p class="description font-4">MEXICAN SANDWICH</p>
-                                <p class="details">Mayonnaise, refried beans, tomato, avocado, onion, mozzarella cheese and lettuce.</p>
+                                <p class="details">Mayonnaise, refried beans, tomato, avocado, onion, mozzarella cheese
+                                    and
+                                    lettuce.</p>
                             </div>
                             <p class="tortas_card_right">$14.<span>59</span></p>
                         </div>
@@ -92,7 +144,12 @@
                     <div class="quesadillas-section">
                         <p class="font-4">QUESADILLAS</p>
                         <div class="quesadillas-item">
-                            <p class="description"> 10" TORTILLA Your choice of one of the following: steak strips, grilled chicken or al pastor. Cooked with onions, peppers, tomatoes and mushrooms. Served with rice, refried or black beans, romaine mix, guacamole, sour cream and pico. Add shrimp for only $4.99 more
+                            <p class="description"> 10" TORTILLA Your choice of one of the following: steak strips,
+                                grilled
+                                chicken or al pastor. Cooked with onions, peppers, tomatoes and mushrooms. Served with
+                                rice,
+                                refried or black beans, romaine mix, guacamole, sour cream and pico. Add shrimp for only
+                                $4.99 more
                                 <span class="price"> $17.99</span>
                                 <span class="short-info">Add shrimp for only $4.99 more</span>
                             </p>
@@ -111,7 +168,9 @@
                             <div class="entradas-item">
                                 <div>
                                     <p class="item-title font-4_16">SHRIMP DIP</p>
-                                    <p class="item-description">Grilled Shrimp, onion, mushrooms, poblano peppers, melted cheese.</p>
+                                    <p class="item-description">Grilled Shrimp, onion, mushrooms, poblano peppers,
+                                        melted
+                                        cheese.</p>
                                 </div>
                                 <p class="tortas_card_right">$14.<span>49</span></p>
                             </div>
@@ -126,7 +185,9 @@
                             <div class="entradas-item">
                                 <div>
                                     <p class="item-title font-4_16">AVOCADO ROLLITOS</p>
-                                    <p class="item-description">Two deep fried small rollitos filled with black bean corn salsa, cheese and avocado. Served with lettuce and chipotle dressing.</p>
+                                    <p class="item-description">Two deep fried small rollitos filled with black bean
+                                        corn
+                                        salsa, cheese and avocado. Served with lettuce and chipotle dressing.</p>
                                 </div>
                                 <p class="tortas_card_right">$11.<span>99</span></p>
                             </div>
@@ -139,16 +200,16 @@
                                     <p class="item-description"">5oz $4.39 10oz  $8.09</p>
                                 </div>
                             </div>
-                            <div class="entradas-item_2">
+                            <div class=" entradas-item_2">
                                     <div>
                                         <p class="item-title font-4_16">GUACAMOLE</p>
-                                        <p class="item-description">5oz  $4.29 10oz  $7.99</p>
+                                        <p class="item-description">5oz $4.29 10oz $7.99</p>
                                     </div>
                                 </div>
                                 <div class="entradas-item_2">
                                     <div>
                                         <p class="item-title font-4_16">BEEN DIP</p>
-                                        <p class="item-description">10oz  $7.99</p>
+                                        <p class="item-description">10oz $7.99</p>
                                     </div>
                                 </div>
                                 <div class="entradas-item_2">
@@ -186,21 +247,27 @@
                             <div class="lunch_info">
                                 <div class="lunch_info_left">
                                     <h2 class="title font-4">CHICKEN LANCHAO</h2>
-                                    <p class="taco_description">Marinated chicken breast topped with onions, mushrooms and melted Mozzarella cheese. Served with rice and sour cream salad.</p>
+                                    <p class="taco_description">Marinated chicken breast topped with onions, mushrooms
+                                        and
+                                        melted Mozzarella cheese. Served with rice and sour cream salad.</p>
                                 </div>
                                 <p class="taco_price">$15.<span class="span_2">99</span></p>
                             </div>
                             <div class="lunch_info">
                                 <div class="lunch_info_left">
                                     <h2 class="title font-4">HUEVOS CON CHORIZO</h2>
-                                    <p class="taco_description">Three scrambled eggs with Mexican sausage served with rice, refried or black beans and tortillas.</p>
+                                    <p class="taco_description">Three scrambled eggs with Mexican sausage served with
+                                        rice,
+                                        refried or black beans and tortillas.</p>
                                 </div>
                                 <p class="taco_price">$11.<span class="span_2">99</span></p>
                             </div>
                             <div class="lunch_info">
                                 <div class="lunch_info_left">
                                     <h2 class="title font-4">FAJITA TACO SALAD</h2>
-                                    <p class="taco_description">Crispy flour shell, refried or black beans, your choice of steak or chicken, cheese sauce, lettuce, sour cream and a slice of tomato.</p>
+                                    <p class="taco_description">Crispy flour shell, refried or black beans, your choice
+                                        of
+                                        steak or chicken, cheese sauce, lettuce, sour cream and a slice of tomato.</p>
                                 </div>
                                 <div style="display: flex; flex-direction: column; gap: 3rem; height: 100%;">
                                     <p class="taco_price">$17.<span class="span_2">99</span><span
@@ -212,7 +279,9 @@
                             <div class="lunch_info">
                                 <div class="lunch_info_left">
                                     <h2 class="title font-4">CHIMICHANGA</h2>
-                                    <p class="taco_description">Soft or deep fried burrito with cheese sauce on top. Served with sour cream, white rice, tomato and guacamole salad.</p>
+                                    <p class="taco_description">Soft or deep fried burrito with cheese sauce on top.
+                                        Served
+                                        with sour cream, white rice, tomato and guacamole salad.</p>
                                 </div>
                                 <div style="display: flex; flex-direction: column; gap: 3rem; height: 100%;">
                                     <p class="taco_price">$12.<span class="span_2">99</span><span
@@ -227,7 +296,8 @@
                                 <div class="lunch_info">
                                     <div class="lunch_info_left">
                                         <h2 class="title font-4">CARNITAS MICHOACAN</h2>
-                                        <p class="taco_description">Delicious roasted pork tips. Served with guacamole salad, pico, rice, beans and tortillas.
+                                        <p class="taco_description">Delicious roasted pork tips. Served with guacamole
+                                            salad, pico, rice, beans and tortillas.
                                         </p>
                                     </div>
                                     <p class="taco_price">$14.<span class="span_2">99</span></p>
@@ -235,10 +305,14 @@
                                 <div class="lunch_info">
                                     <div class="lunch_info_left">
                                         <h2 class="title font-4">CHICA FAJITA</h2>
-                                        <p class="taco_description">Grilled fresh mushrooms, bell peppers, tomatoes and onions. Served with guacamole salad, white rice, sour cream, pico and tortillas. 
+                                        <p class="taco_description">Grilled fresh mushrooms, bell peppers, tomatoes and
+                                            onions. Served with guacamole salad, white rice, sour cream, pico and
+                                            tortillas.
                                         </p>
-                                        <p style="margin-top: 10px;" class="taco_description">Steak 14.99 <span style="margin-left: 20px;">Shrimp 16.49</span>
-                                        <p style="margin-top: 10px;" class="taco_description">Chicken or Pork Carnitas 14.49</span>
+                                        <p style="margin-top: 10px;" class="taco_description">Steak 14.99 <span
+                                                style="margin-left: 20px;">Shrimp 16.49</span>
+                                        <p style="margin-top: 10px;" class="taco_description">Chicken or Pork Carnitas
+                                            14.49</span>
                                         </p>
                                     </div>
                                     <p class="taco_price"></p>
@@ -259,7 +333,8 @@
                                 <div class="lunch_info">
                                     <div class="lunch_info_left">
                                         <h2 class="title font-4">HUEVOS A LA MEXICANA</h2>
-                                        <p class="taco_description">2 eggs scrambled with onions, tomatoes and fresh jalapeños. Served with mexican mashed potato, beans and tortillas.
+                                        <p class="taco_description">2 eggs scrambled with onions, tomatoes and fresh
+                                            jalapeños. Served with mexican mashed potato, beans and tortillas.
                                         </p>
                                     </div>
                                     <p class="taco_price">$11.<span class="span_2">99</span></p>
@@ -267,7 +342,10 @@
                                 <div class="lunch_info">
                                     <div class="lunch_info_left">
                                         <h2 class="title font-4">LUNCH BOWL</h2>
-                                        <p class="taco_description">Grilled chicken strips, zucchini, roasted bell and poblano peppers on a bed of white rice or black beans, topped with cheese sauce and your choice of creamy red sauce or green tomatillo sauce.
+                                        <p class="taco_description">Grilled chicken strips, zucchini, roasted bell and
+                                            poblano peppers on a bed of white rice or black beans, topped with cheese
+                                            sauce
+                                            and your choice of creamy red sauce or green tomatillo sauce.
                                         </p>
                                     </div>
                                     <p class="taco_price">$16.<span class="span_2">49</span></p>
@@ -275,13 +353,19 @@
                             </div>
                             <div class="lunch_info_right">
                                 <p>
-                                    *Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness, especially if you have certain medical conditions.
+                                    *Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may
+                                    increase
+                                    your risk of foodborne illness, especially if you have certain medical conditions.
                                 </p>
                             </div>
                             <div class="lunch_info_right">
                                 <h4>MEX-CANTINA.COM</h4>
                                 <p>
-                                    You may substitute black beans instead of refried beans. Add Fiesta Mix Salad 3.45 to any dinner item. Extra guacamole, sour cream, shredded cheese, lettuce, tomato, cheese dip available for additional charge
+                                    You may substitute black beans instead of refried beans. Add Fiesta Mix Salad 3.45
+                                    to
+                                    any dinner item. Extra guacamole, sour cream, shredded cheese, lettuce, tomato,
+                                    cheese
+                                    dip available for additional charge
                                 </p>
                             </div>
                         </div>
@@ -299,14 +383,17 @@
                             <div class="lunch_info">
                                 <div class="lunch_info_left">
                                     <h2 class="title">STEAK & SRIMP*</h2>
-                                    <p class="taco_description">Ribeye steak and shrimp, covered with melted cheese. Served with rice, refried beans and tortillas.</p>
+                                    <p class="taco_description">Ribeye steak and shrimp, covered with melted cheese.
+                                        Served
+                                        with rice, refried beans and tortillas.</p>
                                 </div>
                                 <p class="taco_price">$23.99</p>
                             </div>
                             <div class="lunch_info">
                                 <div class="lunch_info_left">
                                     <h2 class="title"> CARNE ASADA</h2>
-                                    <p class="taco_description">Grilled skirt steak. Served with rice, refried beans, guacamole salad, pico and tortillas.</p>
+                                    <p class="taco_description">Grilled skirt steak. Served with rice, refried beans,
+                                        guacamole salad, pico and tortillas.</p>
                                 </div>
                                 <p class="taco_price">$23.99</p>
                             </div>
@@ -314,14 +401,18 @@
                                 <div class="lunch_info_left">
                                     <h2 class="title"> CARNITAS
                                         MICHOACÁN</h2>
-                                    <p class="taco_description">DELICIOUS roasted pork tips, Served with guacamole salad, pico, rice, beans and tortillas.</p>
+                                    <p class="taco_description">DELICIOUS roasted pork tips, Served with guacamole
+                                        salad,
+                                        pico, rice, beans and tortillas.</p>
                                 </div>
                                 <p class="taco_price">$17.99</p>
                             </div>
                             <div class="lunch_info">
                                 <div class="lunch_info_left">
                                     <h2 class="title">CHIMICHANGA</h2>
-                                    <p class="taco_description">Two soft or deep-fried burritos topped with our in-house made cheese sauce. Served with rice and refried beans, sour cream and guacamole salad.</p>
+                                    <p class="taco_description">Two soft or deep-fried burritos topped with our in-house
+                                        made cheese sauce. Served with rice and refried beans, sour cream and guacamole
+                                        salad.</p>
                                 </div>
                                 <p class="taco_price">$17.99</p>
                             </div>
@@ -329,21 +420,27 @@
                                 <div class="lunch_info_left">
                                     <h2 class="title">MEXCANTINA
                                         PLATTER</h2>
-                                    <p class="taco_description">Chicken enchilada, grilled marinated chicken breast and skirt steak. Served with rice, black beans and tortillas.</p>
+                                    <p class="taco_description">Chicken enchilada, grilled marinated chicken breast and
+                                        skirt steak. Served with rice, black beans and tortillas.</p>
                                 </div>
                                 <p class="taco_price">$22.99</p>
                             </div>
                             <div class="lunch_info">
                                 <div class="lunch_info_left">
                                     <h2 class="title"> 3 CARNES BOWL</h2>
-                                    <p class="taco_description">Asada, pastor, chorizo, black beans and red creamy sauce.</p>
+                                    <p class="taco_description">Asada, pastor, chorizo, black beans and red creamy
+                                        sauce.
+                                    </p>
                                 </div>
                                 <p class="taco_price">$20.99</p>
                             </div>
                             <div class="lunch_info">
                                 <div class="lunch_info_left">
                                     <h2 class="title">ENCHILADAS OAXACA</h2>
-                                    <p class="taco_description">Supreme combination of four enchiladas, one chicken, one steak, one cheese and one beans, covered with creamy green tomatillo sauce, lettuce, sour cream and tomato.</p>
+                                    <p class="taco_description">Supreme combination of four enchiladas, one chicken, one
+                                        steak, one cheese and one beans, covered with creamy green tomatillo sauce,
+                                        lettuce,
+                                        sour cream and tomato.</p>
                                 </div>
                                 <p class="taco_price">$14.99</p>
                             </div>
@@ -359,7 +456,9 @@
                             <div class="lunch_info">
                                 <div class="lunch_info_left">
                                     <h2 class="title"> CANTINA SALAD</h2>
-                                    <p class="taco_description">Romain lettuce with grilled chicken, roasted black beans & vegetable mix, cheddar monterrey cheese and your choice of dressing.</p>
+                                    <p class="taco_description">Romain lettuce with grilled chicken, roasted black beans
+                                        &
+                                        vegetable mix, cheddar monterrey cheese and your choice of dressing.</p>
                                 </div>
                                 <p class="taco_price">$18.99</p>
                             </div>
@@ -380,21 +479,28 @@
                             <div class="lunch_info">
                                 <div class="lunch_info_left">
                                     <h2 class="title font-4">CHICKEN LANCHAO</h2>
-                                    <p class="taco_description">Marinated chicken breast topped with onions, mushrooms and melted Mozzarella cheese. Served with rice and sour cream salad.</p>
+                                    <p class="taco_description">Marinated chicken breast topped with onions, mushrooms
+                                        and
+                                        melted Mozzarella cheese. Served with rice and sour cream salad.</p>
                                 </div>
                                 <p class="taco_price">$18.<span class="span_2">99</span></p>
                             </div>
                             <div class="lunch_info">
                                 <div class="lunch_info_left">
                                     <h2 class="title font-4">POLLO VEGGIE</h2>
-                                    <p class="taco_description">Grilled chicken strips cooked with squash, zucchini, bell peppers, onion and tomatoes, over a bed of rice, topped with cheese sauce. Served with guacamole salad, sour cream, tomato and tortillas.</p>
+                                    <p class="taco_description">Grilled chicken strips cooked with squash, zucchini,
+                                        bell
+                                        peppers, onion and tomatoes, over a bed of rice, topped with cheese sauce.
+                                        Served
+                                        with guacamole salad, sour cream, tomato and tortillas.</p>
                                 </div>
                                 <p class="taco_price">$19.<span class="span_2">99</span></p>
                             </div>
                             <div class="lunch_info">
                                 <div class="lunch_info_left">
                                     <h2 class="title font-4">BAKED POTATO & CHICKEN</h2>
-                                    <p class="taco_description">Baked potato topped with grilled chicken and cheese dip. Served with rice, lettuce, sour cream and pico.</p>
+                                    <p class="taco_description">Baked potato topped with grilled chicken and cheese dip.
+                                        Served with rice, lettuce, sour cream and pico.</p>
                                 </div>
                                 <p class="taco_price">$18.<span class="span_2">99</span></p>
                             </div>
@@ -405,14 +511,20 @@
                                     <div class="lunch_info_left">
                                         <h2 class="title font-4">POLLO
                                             ESCONDIDO</h2>
-                                        <p class="taco_description">Chicken strips cooked with pineapple and Mexican sausage, all topped with melted Mozzarella cheese, served over a flour tortilla. Rice and sour cream salad on the side.</p>
+                                        <p class="taco_description">Chicken strips cooked with pineapple and Mexican
+                                            sausage, all topped with melted Mozzarella cheese, served over a flour
+                                            tortilla.
+                                            Rice and sour cream salad on the side.</p>
                                     </div>
                                     <p class="taco_price">$19.<span class="span_2">99</span></p>
                                 </div>
                                 <div class="lunch_info">
                                     <div class="lunch_info_left">
                                         <h2 class="title font-4">CHICKEN BOW</h2>
-                                        <p class="taco_description">Fresh mushrooms, red  bell peppers, onions, zucchini and squash. Served with rice, refried beans, lettuce, pico, guacamole and sour cream.</p>
+                                        <p class="taco_description">Fresh mushrooms, red bell peppers, onions, zucchini
+                                            and
+                                            squash. Served with rice, refried beans, lettuce, pico, guacamole and sour
+                                            cream.</p>
                                     </div>
                                     <p class="taco_price">$17.<span class="span_2">49</span></p>
                                 </div>
@@ -420,7 +532,8 @@
                                     <div class="lunch_info">
                                         <div class="lunch_info_left">
                                             <h2 class="title font-4">POLLO PEPE</h2>
-                                            <p class="taco_description">Chicken strips over a bed of rice, covered with melted cheese.</p>
+                                            <p class="taco_description">Chicken strips over a bed of rice, covered with
+                                                melted cheese.</p>
                                         </div>
                                         <p class="taco_price">$18.<span class="span_2">99</span></p>
                                     </div>
@@ -429,14 +542,19 @@
                                         <div class="lunch_info">
                                             <div class="lunch_info_left">
                                                 <h2 class="title font-4">PUERTO TILAPIA</h2>
-                                                <p class="taco_description">Grilled tilapia fish served with pico, guacamole, chipotle sauce, white rice and tortillas </p>
+                                                <p class="taco_description">Grilled tilapia fish served with pico,
+                                                    guacamole, chipotle sauce, white rice and tortillas </p>
                                             </div>
                                             <p class="taco_price">$18.<span class="span_2">99</span></p>
                                         </div>
                                         <div class="lunch_info">
                                             <div class="lunch_info_left">
                                                 <h2 class="title font-4"> OCEAN BOWL</h2>
-                                                <p class="taco_description">Grilled shrimp sauteed with zucchini, roasted red and poblano peppers,over a bed of white rice, topped with creamy red sauce.</p>
+                                                <p class="taco_description">Grilled shrimp sauteed with zucchini,
+                                                    roasted
+                                                    red and poblano peppers,over a bed of white rice, topped with creamy
+                                                    red
+                                                    sauce.</p>
                                             </div>
                                             <p class="taco_price">$20.<span class="span_2">99</span></p>
                                         </div>
@@ -444,7 +562,9 @@
                                             <div class="lunch_info_left">
                                                 <h2 class="title font-4"> SHRIMP BAKED
                                                     POTATO</h2>
-                                                <p class="taco_description">Baked potato topped with 8 shrimp, crab meat and cheese dip. Served with white rice, lettuce, guacamole and pico.</p>
+                                                <p class="taco_description">Baked potato topped with 8 shrimp, crab meat
+                                                    and
+                                                    cheese dip. Served with white rice, lettuce, guacamole and pico.</p>
                                             </div>
                                             <p class="taco_price">$19.<span class="span_2">99</span></p>
                                         </div>
@@ -452,7 +572,11 @@
                                             <div class="lunch_info_left">
                                                 <h2 class="title font-4"> SHRIMP
                                                     CHIMICHANGA</h2>
-                                                <p class="taco_description">Two fried chimichangas filled with shrimp, bell peppers and onions. Topped with cheese dip and served with white rice and guacamole salad.</p>
+                                                <p class="taco_description">Two fried chimichangas filled with shrimp,
+                                                    bell
+                                                    peppers and onions. Topped with cheese dip and served with white
+                                                    rice
+                                                    and guacamole salad.</p>
                                             </div>
                                             <p class="taco_price">$18.<span class="span_2">99</span></p>
                                         </div>
@@ -464,7 +588,13 @@
                                         <div class="lunch_info_left">
                                             <h2 class="title font-4">CHIMICHANGA
                                                 VEGGIE</h2>
-                                            <p class="taco_description">One deep fried burrito stuffed with grilled red and green bell peppers, zucchini, fresh avocado and covered with our in-house made cheese sauce. Served with black or refried beans, white rice and sour cream salad.</p>
+                                            <p class="taco_description">One deep fried burrito stuffed with grilled red
+                                                and
+                                                green bell peppers, zucchini, fresh avocado and covered with our
+                                                in-house
+                                                made cheese sauce. Served with black or refried beans, white rice and
+                                                sour
+                                                cream salad.</p>
                                         </div>
                                         <p class="taco_price">$13.<span class="span_2">99</span></p>
                                     </div>
@@ -472,7 +602,10 @@
                                         <div class="lunch_info_left">
                                             <h2 class="title font-4">QUESADILLA
                                                 VEGGIE</h2>
-                                            <p class="taco_description">Grilled flour tortilla stuffed with onions, bell peppers, tomatoes, mushrooms and cheese. Served with fiesta mix salad and black or refried beans.</p>
+                                            <p class="taco_description">Grilled flour tortilla stuffed with onions, bell
+                                                peppers, tomatoes, mushrooms and cheese. Served with fiesta mix salad
+                                                and
+                                                black or refried beans.</p>
                                         </div>
                                         <p class="taco_price">$14.<span class="span_2">99</span></p>
                                     </div>
@@ -480,14 +613,20 @@
                                         <div class="lunch_info_left">
                                             <h2 class="title font-4"> AVOCADO
                                                 QUESADILLA</h2>
-                                            <p class="taco_description">One grilled flour tortilla quesadilla stuffed with grilled red and green bell peppers, zucchini and squash, cheese, avocado. Served with fiesta mix salad.</p>
+                                            <p class="taco_description">One grilled flour tortilla quesadilla stuffed
+                                                with
+                                                grilled red and green bell peppers, zucchini and squash, cheese,
+                                                avocado.
+                                                Served with fiesta mix salad.</p>
                                         </div>
                                         <p class="taco_price">$14.<span class="span_2">99</span></p>
                                     </div>
                                     <div class="lunch_info">
                                         <div class="lunch_info_left">
                                             <h2 class="title font-4">BURRITO VEGGIE</h2>
-                                            <p class="taco_description">One large burrito filled with grilled mushrooms, bell peppers, onions, tomatoes, zucchini and squash, covered with cheese sauce.</p>
+                                            <p class="taco_description">One large burrito filled with grilled mushrooms,
+                                                bell peppers, onions, tomatoes, zucchini and squash, covered with cheese
+                                                sauce.</p>
                                         </div>
                                         <p class="taco_price">$15.<span class="span_2">99</span></p>
                                     </div>
@@ -495,7 +634,9 @@
                             </div>
                             <div class="container_page_4_content_right">
                                 <h1 class="font-6" style="color: white;">FAJITAS</h1>
-                                <p>All fajitas are sizzling, cooked with fresh bell peppers, mushrooms, onions, tomatoes, served with lettuce, guacamole, sour cream, pico, beans, rice and tortillas.</p>
+                                <p>All fajitas are sizzling, cooked with fresh bell peppers, mushrooms, onions,
+                                    tomatoes,
+                                    served with lettuce, guacamole, sour cream, pico, beans, rice and tortillas.</p>
                                 <div class="lunch_info">
                                     <h2 class="fajitas_h2">CHICKEN</h2>
                                     <p class="taco_price ">$20.<span class="span_2">99</span></p>
@@ -533,21 +674,32 @@
                                 <div class="lunch_info">
                                     <div class="lunch_info_left">
                                         <h2 class="fajitas_h2">FAJITA VEGETARIAN</h2>
-                                        <p class="taco_description" style="text-align: left;">Grilled fresh mushrooms, red and green peppers, onions, tomatoes, zucchini, and squash. Side plate of refried beans, white rice, Fiesta mix salad with pico, guacamole and sour cream. Served with tortillas.</p>
+                                        <p class="taco_description" style="text-align: left;">Grilled fresh mushrooms,
+                                            red
+                                            and green peppers, onions, tomatoes, zucchini, and squash. Side plate of
+                                            refried
+                                            beans, white rice, Fiesta mix salad with pico, guacamole and sour cream.
+                                            Served
+                                            with tortillas.</p>
                                     </div>
                                     <p class="taco_price ">$15.<span class="span_2">49</span></p>
                                 </div>
                                 <div class="lunch_info">
                                     <div class="lunch_info_left">
                                         <h2 class="fajitas_h2">FAJITAS BURRITO</h2>
-                                        <p class="taco_description" style="text-align: left;">Large chicken or steak burrito filled with bell peppers, tomatoes and onion. Topped with cheese dip, served withe rice and your choice of beans on the side.</p>
+                                        <p class="taco_description" style="text-align: left;">Large chicken or steak
+                                            burrito
+                                            filled with bell peppers, tomatoes and onion. Topped with cheese dip, served
+                                            withe rice and your choice of beans on the side.</p>
                                     </div>
                                     <p class="taco_price ">$16.<span class="span_2">99</span></p>
                                 </div>
                             </div>
                         </div>
                         <div class="container_page_4_end">
-                            <p style="text-align: center; font-size: 12px; font-weight: 600;">Please inform your server if you have any allergies or dietary restrictions.</p>
+                            <p style="text-align: center; font-size: 12px; font-weight: 600;">Please inform your server
+                                if
+                                you have any allergies or dietary restrictions.</p>
                             <div class="lunch_info_right">
                                 <h4>MEX-CANTINA.COM</h4>
                                 <p>
@@ -565,14 +717,17 @@
                             <div class="lunch_info page_5_left">
                                 <div class="lunch_info_left">
                                     <h2 class="title font-4"> PATRÓN SKINNY MARGARITA</h2>
-                                    <p class="taco_description">Patrón Silver, fresh lime juice, agave nectar. Served on the rocks, garnished with a lime.</p>
+                                    <p class="taco_description">Patrón Silver, fresh lime juice, agave nectar. Served on
+                                        the
+                                        rocks, garnished with a lime.</p>
                                 </div>
                                 <p class="taco_price">$16.<span class="span_2">59</span></p>
                             </div>
                             <div class="lunch_info page_5_left">
                                 <div class="lunch_info_left">
                                     <h2 class="title font-4"> PIÑARITA</h2>
-                                    <p class="taco_description"> Patrón Silver, pineapple liqour, fresh lime juice and a fresh jalapeño slice.</p>
+                                    <p class="taco_description"> Patrón Silver, pineapple liqour, fresh lime juice and a
+                                        fresh jalapeño slice.</p>
                                 </div>
                                 <p class="taco_price">$16.<span class="span_2">69</span></p>
                             </div>
@@ -586,7 +741,9 @@
                             <div class="lunch_info page_5_left">
                                 <div class="lunch_info_left">
                                     <h2 class="title font-4">MEXCANTINA MARGARITA</h2>
-                                    <p class="taco_description">Patrón Reposado, strawberry, fresh lime juice, house sour mix and garnished with a lime wedge.</p>
+                                    <p class="taco_description">Patrón Reposado, strawberry, fresh lime juice, house
+                                        sour
+                                        mix and garnished with a lime wedge.</p>
                                 </div>
                                 <p class="taco_price">$16.<span class="span_2">99</span></p>
                             </div>
@@ -600,7 +757,9 @@
                             <div class="lunch_info page_5_left">
                                 <div class="lunch_info_left">
                                     <h2 class="title font-4">LA CHATINA MULE</h2>
-                                    <p class="taco_description">Patrón Reposado, ginger beer, fresh lime juice, garnished with a lime wedge. Served on the rocks.</p>
+                                    <p class="taco_description">Patrón Reposado, ginger beer, fresh lime juice,
+                                        garnished
+                                        with a lime wedge. Served on the rocks.</p>
                                 </div>
                                 <p class="taco_price">$11.<span class="span_2">89</span></p>
                             </div>
@@ -614,7 +773,8 @@
                             <div class="lunch_info page_5_left">
                                 <div class="lunch_info_left">
                                     <h2 class="title font-4"> OAXAQUITA MARGARITA</h2>
-                                    <p class="taco_description">Our signature lime margarita mixed with Bozal Ensamble Mezcal and finished with tajin rim.</p>
+                                    <p class="taco_description">Our signature lime margarita mixed with Bozal Ensamble
+                                        Mezcal and finished with tajin rim.</p>
                                 </div>
                                 <p class="tortas_card_right">$9.<span class="span">99</span></p>
                             </div>
@@ -637,7 +797,12 @@
                             <img src="img/Recurso 18.png" alt="margarita" loading="lazy" style="width: 100%;" />
                             <div class="select_premium_tequila">
                                 <h1 class="title font-6 p_color" style="text-align: center;">SELECT PREMIUM TEQUILA</h1>
-                                <p style="text-align: center;">The agave plant is most commonly found in Jalisco, Mexico and is the base ingredient of tequila. Tequila has been a part of Mexican culture since the 16th century. Be sure to experience this centuries-old tradition with MexCantina selection of only the best tequilas.</p>
+                                <p style="text-align: center;">The agave plant is most commonly found in Jalisco, Mexico
+                                    and
+                                    is the base ingredient of tequila. Tequila has been a part of Mexican culture since
+                                    the
+                                    16th century. Be sure to experience this centuries-old tradition with MexCantina
+                                    selection of only the best tequilas.</p>
                                 <div class="select_premium_tequila_content">
                                     <div class="select_premium_tequila_content_card">
                                         <h4 class="font-4 p_color">PATRÓN</h4>
@@ -739,7 +904,7 @@
                                             GENERACIONES</h4>
                                         <p> Silver 9.19 I Reposado 10.69</p>
                                     </div>
-                                </div> 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -761,14 +926,18 @@
                                 <div class="lunch_info page_5_left">
                                     <div class="lunch_info_left">
                                         <h2 class="title font-4"> BLACKBERRY MOJITO</h2>
-                                        <p class="taco_description">White Rum, organic blackberry mix, crushed mint, sugar, fresh lime, sparkling water and garnished with mint leaves.</p>
+                                        <p class="taco_description">White Rum, organic blackberry mix, crushed mint,
+                                            sugar,
+                                            fresh lime, sparkling water and garnished with mint leaves.</p>
                                     </div>
                                     <p class="taco_price">$10.<span class="span_2">39</span></p>
                                 </div>
                                 <div class="lunch_info page_5_left">
                                     <div class="lunch_info_left">
                                         <h2 class="title font-4"> CANTARITO</h2>
-                                        <p class="taco_description">Tequila Gold, juice of grapefruit and orange, pinch of salt, chamoy and tajin.</p>
+                                        <p class="taco_description">Tequila Gold, juice of grapefruit and orange, pinch
+                                            of
+                                            salt, chamoy and tajin.</p>
                                     </div>
                                     <p class="taco_price">$11.<span class="span_2">99</span></p>
                                 </div>
@@ -783,7 +952,8 @@
                                 <div class="lunch_info page_5_left">
                                     <div class="lunch_info_left">
                                         <h2 class="title font-4"> LOVE BUG</h2>
-                                        <p class="taco_description">Titos Vodka, cranberry juice, juice lime, grenadine syrup and sprite.</p>
+                                        <p class="taco_description">Titos Vodka, cranberry juice, juice lime, grenadine
+                                            syrup and sprite.</p>
                                     </div>
                                     <p class="taco_price">$10.<span class="span_2">99</span></p>
                                 </div>
@@ -797,7 +967,8 @@
                                 <div class="lunch_info page_5_left">
                                     <div class="lunch_info_left">
                                         <h2 class="title font-4"> BLUEBERRY MULE</h2>
-                                        <p class="taco_description">Titos Vodka, blueberry syrup and fruit, lime, ginger beer and blueberry skewer and mint.</p>
+                                        <p class="taco_description">Titos Vodka, blueberry syrup and fruit, lime, ginger
+                                            beer and blueberry skewer and mint.</p>
                                     </div>
                                     <p class="taco_price">$10.<span class="span_2">69</span></p>
                                 </div>
@@ -830,35 +1001,44 @@
                             <div class="container_page_5_end_left_box">
                                 <div class="lunch_info_left">
                                     <h2 class="title font-4">IMPORT AND CRAFT</h2>
-                                    <p class="taco_description">Corona Extra, Modelo Especial, Pacifico, Truth, Juicy Truth y Cincy Light.</p>
+                                    <p class="taco_description">Corona Extra, Modelo Especial, Pacifico, Truth, Juicy
+                                        Truth
+                                        y Cincy Light.</p>
                                 </div>
                                 <p> Pint 5.39 / Grande 6.69</p>
                             </div>
                             <div class="container_page_5_end_left_box">
                                 <div class="lunch_info_left">
                                     <h2 class="title font-4">DOMESTIC</h2>
-                                    <p class="taco_description">Domestic Bud light, Miller Lite, Michelob Ultra, Blue Moon.</p>
+                                    <p class="taco_description">Domestic Bud light, Miller Lite, Michelob Ultra, Blue
+                                        Moon.
+                                    </p>
                                 </div>
                                 <p>Pint 4.49 / Grande 5.99</p>
                             </div>
                             <div class="container_page_5_end_left_box">
                                 <div class="lunch_info_left">
                                     <h2 class="title font-4">IMPORT BOTTLE</h2>
-                                    <p class="taco_description">Corona Extra, Pacifico, Corona Light, Modelo Especial, Modelo Negra, Victoria, XX Lager, XX Amber, Tecate, Heineken.</p>
+                                    <p class="taco_description">Corona Extra, Pacifico, Corona Light, Modelo Especial,
+                                        Modelo Negra, Victoria, XX Lager, XX Amber, Tecate, Heineken.</p>
                                 </div>
                                 <p class="tortas_card_right">$5.<span class="span">49</span></p>
                             </div>
                             <div class="container_page_5_end_left_box">
                                 <div class="lunch_info_left">
                                     <h2 class="title font-4">DOMESTIC BOTTLE</h2>
-                                    <p class="taco_description">Budweiser, Bud light, Miller Light, Coors Light and Michelob Ultra, Busch Light.</p>
+                                    <p class="taco_description">Budweiser, Bud light, Miller Light, Coors Light and
+                                        Michelob
+                                        Ultra, Busch Light.</p>
                                 </div>
                                 <p class="tortas_card_right">$4.<span class="span">49</span></p>
                             </div>
                             <div class="container_page_5_end_left_box">
                                 <div class="lunch_info_left">
                                     <h2 class="title font-4">MICHELADA</h2>
-                                    <p class="taco_description">Beer, tomatoe juice, fresh lime juice, and our-in house made authenthic Michelada mix.</p>
+                                    <p class="taco_description">Beer, tomatoe juice, fresh lime juice, and our-in house
+                                        made
+                                        authenthic Michelada mix.</p>
                                 </div>
                                 <p class="tortas_card_right">$8.<span class="span">99</span></p>
                             </div>

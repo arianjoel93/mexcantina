@@ -12,38 +12,86 @@
     <meta name="keywords" content="Mexican cuisine, authentic Mexican food, Mexican restaurant">
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <title>Mexcantina</title>
 </head>
 
 <body>
+    <header>
+        <a href="/">
+            <img src="img/Recurso 1.png" />
+        </a>
+        <nav id="navbar">
+            <a onclick="toggleMenu()" href="/" title="Go to Home Page">Home <svg width="20" height="20"
+                    viewBox="0 0 25 25">
+                    <path d="M12 15l-8-8h16z" />
+                </svg></a>
+            <a href="/menu.html" title="View our Menu">Menu <svg width="20" height="20" viewBox="0 0 25 25">
+                    <path d="M12 15l-8-8h16z" />
+                </svg></a>
+            <a onclick="toggleMenu()" href="#contact" title="Contact Us">Contact <svg width="20" height="20"
+                    viewBox="0 0 25 25">
+                    <path d="M12 15l-8-8h16z" />
+                </svg></a>
+            <a onclick="toggleModal()">ORDER ONLINE</a>
+        </nav>
+        <div id="menu-icon" onclick="toggleMenu()">
+            &#9776;
+        </div>
+    </header>
     <main>
-        <header>
-            <a href="/">
-                <img src="img/Recurso 1.png" />
-            </a>
-            <nav id="navbar">
-                <a onclick="toggleMenu()" href="/" title="Go to Home Page">Home <svg width="20" height="20"
-                        viewBox="0 0 25 25">
-                        <path d="M12 15l-8-8h16z" />
-                    </svg></a>
-                <a href="/menu.html" title="View our Menu">Menu <svg width="20" height="20" viewBox="0 0 25 25">
-                        <path d="M12 15l-8-8h16z" />
-                    </svg></a>
-                <a onclick="toggleMenu()" href="#contact" title="Contact Us">Contact <svg width="20" height="20"
-                        viewBox="0 0 25 25">
-                        <path d="M12 15l-8-8h16z" />
-                    </svg></a>
-                <a target="_blank"
-                    href="https://order.spoton.com/so-mexcantina-tacos-quesadillas-y-margaritas-19358/cincinnati-oh/66463922847348003ec9155a"
-                    title="Contact Us">ORDER ONLINE</a>
-            </nav>
-            <div id="menu-icon" onclick="toggleMenu()">
-                &#9776;
+        <div id="overlay_modal" class="overlay_modal">
+            <div class="modal">
+                <div class="modal_options">
+                    <a target="_blank"
+                        href="https://order.spoton.com/so-mexcantina-tacos-quesadillas-y-margaritas-19358/cincinnati-oh/66463922847348003ec9155a">
+                        <div class="modal_img">
+                            <img src="img/spoton.png" />
+                            Spoton
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right"
+                            width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 12l14 0" />
+                            <path d="M15 16l4 -4" />
+                            <path d="M15 8l4 4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="modal_options">
+                    <a target="_blank"
+                        href="https://www.doordash.com/store/mexcantina-cincinnati-29927343/?pickup=true&utm_campaign=gpa">
+                        <div class="modal_img">
+                            <img src="img/doordash.png" />
+                            Doordash
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right"
+                            width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 12l14 0" />
+                            <path d="M15 16l4 -4" />
+                            <path d="M15 8l4 4" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="close-modal" onClick="toggleModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-x" width="44" height="44" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M18 6l-12 12" />
+                        <path d="M6 6l12 12" />
+                    </svg>
+                </div>
             </div>
-        </header>
+        </div>
         <div id="home" class="container_home">
             Now Open
         </div>
@@ -67,7 +115,8 @@
                     <p> Join us and indulge in unforgettable moments with friends and family, in a place where food is
                         more
                         than an
-                        experience—it's a celebration of Mexican culture. Welcome to Mexcantina, where every bite tells
+                        experience — it's a celebration of Mexican culture. Welcome to Mexcantina, where every bite
+                        tells
                         a
                         story!</p>
                 </div>
@@ -169,7 +218,7 @@
             <div class="contact_grid_int">
                 <div class="content_info">
                     <h3>Our Adress</h3>
-                    <p>2653 Erie Ave, Cincinnati, OH 45208</p>
+                    <p>(513) 321-0296, 2653 Erie Ave, Cincinnati, OH 45208</p>
                     <a href="https://maps.app.goo.gl/Yz1xCTfuBSkAPgDC8" target="_blank"><strong>
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d386.81892200879975!2d-84.4436276!3d39.1394391!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8841b30054fae08d%3A0x1aedc803f20d78c6!2sMexCantina!5e0!3m2!1ses!2smx!4v1723698272494!5m2!1ses!2smx"
@@ -208,7 +257,7 @@
                     <a href="mailto:contact@mex-cantina.com"><strong>SEND MESSAGE</strong></a>
                 </div>
             </div>
-            
+
     </main>
     <footer>
         <p>Copyright©2021 MEXCANTINA All Rights Reserved.</p>

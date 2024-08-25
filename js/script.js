@@ -55,3 +55,12 @@ function toggleMenu() {
     }
 }
 
+function toggleModal() {
+    var overlay = document.getElementById('overlay_modal');
+    if (overlay.style.display === "none" || overlay.style.display === "") {
+        overlay.style.display = "grid";
+    } else {
+        overlay.style.display = "none";
+    }
+}
+
