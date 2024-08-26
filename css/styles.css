@@ -286,10 +286,10 @@ nav a:hover svg {
     nav.active {
         display: flex;
     }
-
-    .overlay_modal {
-        display: none;
+    .overlay_modal{
+        display:none;
     }
+
 }
 
 
