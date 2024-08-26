@@ -63,9 +63,4 @@ function toggleModal() {
     } else {
         overlay.style.display = "none";
     }
-    if (modal.style.display === "none" || modal.style.display === "") {
-        modal.style.display = "grid";
-    } else {
-        modal.style.display = "none";
-    }
 }

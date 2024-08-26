@@ -202,7 +202,7 @@ nav a:hover svg {
     background-color: white;
     width: 250px;
     height: auto;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 10px;
