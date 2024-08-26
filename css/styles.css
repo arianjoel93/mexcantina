@@ -91,6 +91,7 @@ body {
     font-family: 'fuente-6', sans-serif !important;
     font-size: 44px !important;
 }
+
 .p_color {
     color: #DAA520;
 }
@@ -106,13 +107,14 @@ body {
     margin: 0 auto;
     text-align: center;
 }
-iframe{
+
+iframe {
     width: 300px;
     height: 200px;
     border-radius: 10px;
 }
 
-main{
+main {
     background-image: url('/img/Recurso\ 16.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -181,9 +183,10 @@ nav a:hover svg {
     margin: 2rem 0 !important;
     letter-spacing: 1rem !important;
 }
-.overlay_modal{
-    display:none;
-    position:fixed;
+
+.overlay_modal {
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -194,17 +197,19 @@ nav a:hover svg {
     overflow: hidden;
     place-items: center;
 }
-.modal{
+
+.modal {
     background-color: white;
     width: 250px;
     height: auto;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     border-radius: 10px;
     position: relative;
 }
-.modal .close-modal{
+
+.modal .close-modal {
     position: absolute;
     top: -30px;
     right: -30px;
@@ -212,43 +217,47 @@ nav a:hover svg {
     width: 30px;
     height: 30px;
 }
-.modal .close-modal svg{
+
+.modal .close-modal svg {
     width: 30px;
     height: 30px;
 }
 
-.modal a{
+.modal a {
     padding: 0 2rem;
     text-decoration: none;
     font-size: 18px;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    justify-content:space-between;
+    justify-content: space-between;
     width: 100%;
     height: 60px;
     color: #333;
     border-radius: 10px;
 }
-.modal a:hover{
+
+.modal a:hover {
     background-color: rgb(235, 235, 235);
     transition: all 0.5s ease;
 }
-.modal_img{
+
+.modal_img {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
-.modal_options{
+
+.modal_options {
     display: flex;
     gap: 0.5rem;
     align-items: center;
 }
-.modal_options img{
+
+.modal_options img {
     width: 30px;
     height: 30px;
 }
-
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -276,6 +285,10 @@ nav a:hover svg {
 
     nav.active {
         display: flex;
+    }
+
+    .overlay_modal {
+        display: none;
     }
 }
 
@@ -692,7 +705,8 @@ strong {
         flex-direction: column;
         gap: 0rem
     }
-    iframe{
+
+    iframe {
         margin-bottom: 10rem;
     }
 }
@@ -890,13 +904,15 @@ strong {
     font-size: 26px;
     position: relative;
 }
-.span_2{
+
+.span_2 {
     position: absolute;
     top: 2px;
     right: -15px;
     font-size: 14px;
 }
-.span_text{
+
+.span_text {
     position: absolute;
     top: -14px;
     right: 4px;
@@ -1130,6 +1146,7 @@ strong {
     margin: 0 auto;
     padding: 0 5rem;
 }
+
 .lunch_section h2 {
     color: #DAA520;
 }
@@ -1186,7 +1203,8 @@ strong {
     grid-template-columns: 2fr 1fr;
     gap: 4rem;
 }
-.lunch_info .taco_price{
+
+.lunch_info .taco_price {
     font-family: 'fuente-3', sans-serif;
     font-weight: 100 !important;
     font-size: 26px;
@@ -1273,39 +1291,44 @@ strong {
     gap: 2rem;
     padding: 2rem;
 }
-.container_page_4{
-    display:flex;
-    flex-direction:column;
+
+.container_page_4 {
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
 }
-.container_page_4_into{
+
+.container_page_4_into {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
 }
 
-.container_page_4_content{
+.container_page_4_content {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 5rem;
 }
-.container_page_4_content_left{
+
+.container_page_4_content_left {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
 }
-.veggies_seafood_info{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-.seafood_left{
+
+.veggies_seafood_info {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.container_page_4_content_right{
+.seafood_left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.container_page_4_content_right {
     display: flex;
     flex-direction: column;
     color: white;
@@ -1314,17 +1337,20 @@ strong {
     background-color: #DAA520;
     padding: 2rem;
 }
-.container_page_4_content_right h1{
+
+.container_page_4_content_right h1 {
     margin-bottom: 0 !important;
     text-align: center;
 }
-.fajitas_h2{
+
+.fajitas_h2 {
     color: white !important;
     font-family: 'fuente-4', sans-serif !important;
     font-size: 26px;
     position: relative;
 }
-.span_3{
+
+.span_3 {
     position: absolute;
     font-size: 8px;
     font-family: 'fuente-3', sans-serif !important;
@@ -1332,44 +1358,52 @@ strong {
     left: 0;
     color: white;
 }
-.span_3_2{
+
+.span_3_2 {
     bottom: -14px !important;
 
 }
-.container_page_4_content_right p{
+
+.container_page_4_content_right p {
     font-size: 10px;
     text-align: center;
 }
-.container_page_4_end{
+
+.container_page_4_end {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     place-items: center;
     margin-top: 5rem;
 }
-.container_page_4_end .lunch_info_right h4{
+
+.container_page_4_end .lunch_info_right h4 {
     margin: 0;
 }
 
-.container_page_5{
-    display:grid;
+.container_page_5 {
+    display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 5rem;
 }
-.container_page_5_left{
+
+.container_page_5_left {
     display: flex;
     flex-direction: column;
     gap: 5rem;
 }
-.page_5_left{
+
+.page_5_left {
     grid-template-columns: 4fr 1fr !important;
 }
-.container_page_5_right{
+
+.container_page_5_right {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
-.select_premium_tequila{
+
+.select_premium_tequila {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -1377,40 +1411,48 @@ strong {
     border: 4px solid #DAA520;
     padding: 2rem;
 }
-.select_premium_tequila_content{
+
+.select_premium_tequila_content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
 }
-.select_premium_tequila_content_card{
+
+.select_premium_tequila_content_card {
     display: flex;
     flex-direction: column;
 }
-.select_page_5_imgs{
+
+.select_page_5_imgs {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
 }
-.select_page_5_imgs img{
+
+.select_page_5_imgs img {
     width: 100%;
 }
 
-.container_page_5_end{
+.container_page_5_end {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 5rem;
     border: 4px solid #DAA520;
     padding: 2rem;
 }
-.container_page_5_end_left, .container_page_5_end_right{
+
+.container_page_5_end_left,
+.container_page_5_end_right {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
-.container_page_5_end_left h1{
-    font-size:7rem !important;
+
+.container_page_5_end_left h1 {
+    font-size: 7rem !important;
 }
-.container_page_5_end_left_box{
+
+.container_page_5_end_left_box {
     display: grid;
     grid-template-columns: 5fr 1fr;
     gap: 2rem;
@@ -1421,30 +1463,38 @@ strong {
         font-size: 2rem;
         letter-spacing: 8px;
     }
-    .page_3_box_specialties{
+
+    .page_3_box_specialties {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .container_page_2{
+
+    .container_page_2 {
         display: flex;
         flex-direction: column;
     }
-    .container_page_4_content{
+
+    .container_page_4_content {
         display: flex;
         flex-direction: column;
         width: min(100%, 500px);
         margin: 0 auto;
     }
-    .container_page_4_end{
+
+    .container_page_4_end {
         display: flex;
         flex-direction: column;
     }
-    .container_page_5, .container_page_5_end{
+
+    .container_page_5,
+    .container_page_5_end {
         display: flex;
         flex-direction: column;
         gap: 2rem;
     }
-    .container_page_5_end_left h1, .container_page_5_end_right h1{
+
+    .container_page_5_end_left h1,
+    .container_page_5_end_right h1 {
         text-align: center;
         font-size: 3rem !important;
     }
@@ -1455,10 +1505,12 @@ strong {
         display: flex;
         flex-direction: column;
     }
-    .font-xl{
+
+    .font-xl {
         font-size: 3rem !important;
     }
-    .page_3_box_specialties{
+
+    .page_3_box_specialties {
         display: flex;
         flex-direction: column;
     }
@@ -1508,12 +1560,15 @@ strong {
     .entradas-item {
         width: 100%;
     }
-    .container_page_4_into{
+
+    .container_page_4_into {
         display: flex;
         flex-direction: column;
         gap: 2rem;
     }
-    .select_premium_tequila_content, .container_page_5_end_left_box{
+
+    .select_premium_tequila_content,
+    .container_page_5_end_left_box {
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -1528,19 +1583,24 @@ strong {
     .lunch_info_right {
         max-width: 100%;
     }
-    .container_page_4_into, .container_page_4_content_left{
+
+    .container_page_4_into,
+    .container_page_4_content_left {
         display: flex;
         flex-direction: column;
     }
+
     .lunch_section legend {
         letter-spacing: 2px;
     }
+
     /* .span_3_2 {
         bottom: -30px !important;
     } */
     .lunch_info .taco_price {
         font-size: 20px;
     }
+
     .lunch_info {
         justify-content: space-between;
     }
